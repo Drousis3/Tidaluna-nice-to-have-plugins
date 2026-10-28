@@ -1,0 +1,184 @@
+.lf-page {
+	padding: 32px 40px 160px;
+	color: #fff;
+	font-family: inherit;
+}
+
+.lf-header {
+	display: flex;
+	gap: 28px;
+	align-items: flex-end;
+	margin-bottom: 28px;
+}
+.lf-header-info {
+	min-width: 0;
+}
+.lf-label {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	opacity: 0.6;
+}
+.lf-header h1 {
+	font-size: 48px;
+	font-weight: 700;
+	margin: 4px 0 8px;
+}
+.lf-meta {
+	opacity: 0.7;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lf-folder {
+	opacity: 0.7;
+}
+.lf-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 18px;
+}
+
+.lf-btn {
+	border: 0;
+	border-radius: 999px;
+	padding: 10px 20px;
+	font: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+.lf-btn:hover:not(:disabled) {
+	background: rgba(255, 255, 255, 0.18);
+}
+.lf-btn:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+.lf-primary {
+	background: #fff;
+	color: #000;
+}
+.lf-primary:hover:not(:disabled) {
+	background: #ddd;
+}
+
+.lf-cover {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.08);
+	color: rgba(255, 255, 255, 0.4);
+}
+.lf-cover img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.lf-error {
+	padding: 12px 16px;
+	margin-bottom: 16px;
+	border-radius: 6px;
+	background: rgba(255, 60, 60, 0.15);
+	color: #ff8a8a;
+}
+.lf-empty {
+	padding: 60px 0;
+	text-align: center;
+	opacity: 0.8;
+	line-height: 2.5;
+}
+
+.lf-filter {
+	width: 280px;
+	max-width: 100%;
+	padding: 8px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 999px;
+	background: transparent;
+	color: #fff;
+	font: inherit;
+	font-size: 14px;
+	outline: none;
+}
+.lf-filter:focus {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+.lf-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 12px;
+}
+.lf-hint {
+	font-size: 12px;
+	opacity: 0.5;
+}
+
+.lf-row {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 3fr) minmax(0, 2fr) minmax(0, 2fr) 64px 64px;
+	gap: 12px;
+	align-items: center;
+	padding: 6px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+	user-select: none;
+}
+.lf-row > span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.lf-row:not(.lf-head):hover {
+	background: rgba(255, 255, 255, 0.06);
+}
+.lf-head {
+	font-size: 12px;
+	opacity: 0.6;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0;
+	margin-bottom: 4px;
+}
+.lf-head > span {
+	cursor: pointer;
+}
+.lf-current .lf-title,
+.lf-current .lf-index {
+	color: #32f4ff;
+}
+.lf-title {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.lf-title > span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.lf-index {
+	text-align: center;
+	cursor: pointer;
+	opacity: 0.8;
+}
+.lf-play {
+	display: none;
+}
+.lf-row:hover .lf-play {
+	display: inline;
+}
+.lf-row:hover .lf-num {
+	display: none;
+}
+.lf-format {
+	font-size: 11px;
+	opacity: 0.6;
+	letter-spacing: 0.05em;
+}

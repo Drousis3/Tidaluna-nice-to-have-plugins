@@ -1,0 +1,11 @@
+{
+	"name": "@imp/local-files",
+	"description": "Yippie local mp3 and flac files, less reasons to use spotify, more to use tidal :)",
+	"homepage": "https://github.com/Drousis3/Tidaluna-nice-to-have-plugins/tree/main/plugins/LocalFiles",
+	"author": {
+		"name": "Drousis3",
+		"url": "https://github.com/Drousis3"
+	},
+	"main": "./src/index.ts",
+	"type": "module"
+}
