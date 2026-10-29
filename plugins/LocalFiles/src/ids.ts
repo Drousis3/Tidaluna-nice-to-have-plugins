@@ -5,6 +5,7 @@
  */
 export const LOCAL_ID_BASE = 9_000_000_000_000;
 
+// rizz hash, small but gets the job done
 const fnv1a = (str: string, seed: number) => {
 	let hash = seed >>> 0;
 	for (let i = 0; i < str.length; i++) {

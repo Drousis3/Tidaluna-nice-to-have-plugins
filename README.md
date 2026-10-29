@@ -29,3 +29,7 @@ pnpm run watch
 ```
 
 Then install the plugins from the **DEV** store in **Luna Settings → Plugin Store**. Every push to `main` builds the plugins and publishes them to the `latest` release.
+
+---
+
+I hope you like this plugin and I hope we can get more people switch to tidal

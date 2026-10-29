@@ -86,6 +86,7 @@ export const onScanned = (listener: (tracks: LocalTrack[]) => void) => {
 	return () => void scanListeners.delete(listener);
 };
 
+// touch grass? no, touch files
 export const rescan = async () => {
 	if (storage.folder === undefined || libraryState.scanning) return;
 	libraryState.scanning = true;

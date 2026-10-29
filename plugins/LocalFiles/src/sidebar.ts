@@ -14,6 +14,7 @@ const COLLECTION_MENU = `[data-test="sidebar-collection-menu"]`;
 /**
  * Adds a "Local Files" entry to Tidal's sidebar by cloning one of its collection entries.
  */
+// skibidi sidebar button, it just shows up and vibes
 export const addSidebarButton = (unloads: LunaUnloads, onClick: () => void, isOpen: () => boolean) => {
 	const buttons = new Set<HTMLElement>();
 

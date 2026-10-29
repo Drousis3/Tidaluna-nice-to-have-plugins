@@ -31,6 +31,7 @@ const PLACEHOLDER_COVER =
 
 const iso = (year?: string) => (year && /^\d{4}$/.test(year) ? `${year}-01-01T00:00:00.000+0000` : "2000-01-01T00:00:00.000+0000");
 
+// fake it till you make it, tidal thinks this is a real track lol
 export const toTidalTrack = (track: LocalTrack) => {
 	const artist = { id: localId(`artist:${track.artist}`), name: track.artist, type: "MAIN", picture: null, handle: null };
 	const cover = coverTrackId(track);
@@ -138,7 +139,7 @@ export const fixAutoplay = (unloads: LunaUnloads) => {
 	});
 };
 
-export const openContextMenu =(track: LocalTrack, event: { clientX: number; clientY: number }) => {
+export const openContextMenu = (track: LocalTrack, event: { clientX: number; clientY: number }) => {
 	registerInStore([track]);
 	redux.actions["contextMenu/OPEN_MEDIA_ITEM"]({
 		id: track.id,
@@ -178,6 +179,7 @@ const serverTotals = new Map<string, number>();
 
 const PLAYLIST_ITEMS_REGEX = /\/playlists\/([0-9a-f-]{36})\/items$/;
 
+// sigma interceptor, tidal asks and we answer before the server even knows
 const handleRequest = (url: URL, method: string, input: RequestInfo | URL, init?: RequestInit): Response | undefined => {
 	const path = url.pathname;
 
@@ -281,6 +283,7 @@ const isoDuration = (seconds?: number) => {
 const COVER_SIZES = [1280, 640, 320, 160, 80];
 
 /** JSON:API resources Tidal expects in `included` for a track */
+// yap yap thats a lot of JSON for one song, blame JSON:API
 const toV2Resources = (track: LocalTrack): Resource[] => {
 	const artistId = String(localId(`artist:${track.artist}`));
 	const albumId = String(localId(`album:${albumKey(track)}`));

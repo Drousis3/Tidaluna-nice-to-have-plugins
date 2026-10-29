@@ -45,6 +45,7 @@ const parseNumber = (value?: string) => {
 // #endregion
 
 // #region ID3v2 (MP3)
+// yap yap thats just ID3 storing sizes in 7 bit chunks because why not
 const syncsafe = (buf: Buffer, offset: number) => (buf[offset] << 21) | (buf[offset + 1] << 14) | (buf[offset + 2] << 7) | buf[offset + 3];
 
 const decodeText = (buf: Buffer, encoding: number) => {
@@ -157,6 +158,7 @@ const MPEG1_L3_BITRATES = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 22
 const MPEG2_L3_BITRATES = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160];
 const SAMPLE_RATES = [44100, 48000, 32000];
 
+// sigma frame header hunter, no ffmpeg needed
 const mp3Duration = (buf: Buffer, audioStart: number, fileSize: number) => {
 	// Leave room for the Xing/VBRI header reads below
 	for (let i = 0; i + 64 < buf.length; i++) {
@@ -311,6 +313,7 @@ const readTags = async (path: string, withPicture: boolean) => {
 };
 
 /** Splits "Artist - Title" (or "Artist_-_Title") */
+// skibidi function that fixes your "Artist_-_Title_FINAL_v2" downloads
 const splitName = (name: string) => {
 	name = name.replace(/_+/g, " ").trim();
 	const dash = name.indexOf(" - ");
@@ -370,6 +373,7 @@ export const scanFolder = async (folder: string, recursive: boolean = true): Pro
 
 // #region Stream server
 /** Only files from the last scan (or registered from the cache) can be served */
+// the bouncer, no list no entry
 const filesById = new Map<number, string>();
 export const registerFiles = (tracks: Pick<LocalTrack, "id" | "path">[]) => {
 	filesById.clear();

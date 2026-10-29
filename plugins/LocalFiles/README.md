@@ -32,3 +32,7 @@ Part of [Tidaluna nice to have plugins](../../README.md).
 - Local tracks are always at the end of a playlist
 - *Add to My Collection*, album/artist pages, lyrics and credits aren't available for local files
 - Other plugins can't download local files (there is no need, they are already on your PC)
+
+---
+
+I hope you like this plugin and I hope we can get more people switch to tidal

@@ -51,6 +51,7 @@ const sorters: Record<Exclude<SortKey, "default">, (a: LocalTrack, b: LocalTrack
 	duration: (a, b) => (a.duration ?? 0) - (b.duration ?? 0),
 };
 
+// main character page
 export const LocalFilesPage = () => {
 	const { tracks, scanning, error, folder } = useLibrary();
 	const nowPlaying = useNowPlaying();
