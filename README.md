@@ -1,6 +1,6 @@
 # Tidaluna nice to have plugins
 
-A collection of small plugins for [TidaLuna](https://github.com/Inrixia/TidaLuna), the plugin-enabled TIDAL desktop client.
+A collection of skibidi cool plugins for [TidaLuna](https://github.com/Inrixia/TidaLuna), the plugin enabled Tidal desktop client.
 
 ## Install
 
@@ -10,7 +10,7 @@ In TIDAL open **Luna Settings → Plugin Store** and add this store url:
 https://github.com/Drousis3/Tidaluna-nice-to-have-plugins/releases/download/latest/store.json
 ```
 
-Then install the plugins you want from that store.
+Then install the plugins you want from that store. (You want them all)
 
 ## Plugins
 
