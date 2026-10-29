@@ -1,6 +1,6 @@
 # Tidaluna nice to have plugins
 
-A collection of skibidi cool plugins for [TidaLuna](https://github.com/Inrixia/TidaLuna), the plugin enabled Tidal desktop client.
+A collection of cool plugins for [TidaLuna](https://github.com/Inrixia/TidaLuna), the plugin enabled Tidal desktop client.
 
 ## Install
 
